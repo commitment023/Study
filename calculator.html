@@ -1,0 +1,81 @@
+<!doctype html>
+<html> 
+        <head>
+                <title>calculator</title>
+        </head>
+                <body>
+                <form oninput="adding()">
+                        <input type="text" id="x1" />
+                         +  <input type="text" id="y1" />
+                        <a>=
+                        <span id = "result1"></span>
+                        </a><br>
+                </form>
+
+                <form oninput="subtracting()">
+                        <input type="text" id="x2" />
+                        - <input type="text" id="y2" />
+                        <a>=
+                        <span id = "result2"></span>
+                        </a><br>
+                </form>
+
+                <form oninput="multiplying()">
+                        <input type="text" id="x3" />
+                        * <input type="text" id="y3" />
+                        <a>=
+                        <span id = "result3"></span>
+                        </a><br>
+                </form>
+
+                <form oninput="division()">
+                        <input type="text" id="x4" />
+                        : <input type="text" id="y4" />
+                        <a>=
+                        <span id = "result4"></span>
+                        </a><br>
+                </form>
+
+                <form oninput="degree()">
+                        <input type="text" id="x5" />
+                        ^ <input type="text" id="y5" />
+                        <a>=
+                        <span id = "result5"></span>
+                        </a><br>
+                </form>
+        
+                <script>
+
+                        function adding()
+                                { 
+                                        num1 = document.getElementById("x1").value;
+                                        num2 = document.getElementById("y1").value;
+                                        document.getElementById("result1").innerHTML = parseFloat (num1) + parseFloat(num2)
+                                }
+                        function subtracting() 
+                                { 
+                                        num1 = document.getElementById("x2").value;
+                                        num2 = document.getElementById("y2").value;
+                                        document.getElementById("result2").innerHTML = parseFloat(num1) - parseFloat(num2)
+                                }
+                        function multiplying()
+                                {
+                                        num1 = document.getElementById("x3").value;
+                                        num2 = document.getElementById("y3").value;
+                                        document.getElementById("result3").innerHTML = parseFloat(num1) * parseFloat(num2)
+                                }
+                        function division() 
+                                { 
+                                        num1 = document.getElementById("x4").value;
+                                        num2 = document.getElementById("y4").value;
+                                        document.getElementById("result4").innerHTML = parseFloat(num1) / parseFloat(num2)
+                                }
+                        function degree() 
+                                {
+                                        num1 = document.getElementById("x5").value;
+                                        num2 = document.getElementById("y5").value;
+                                        document.getElementById("result5").innerHTML = parseFloat(num1)**parseFloat(num2)
+                                }
+                </script>
+        </body>
+</html>
